@@ -15,7 +15,6 @@
 
     <link rel="stylesheet" href="./assets/css/style.css">
 
-
     <script src="./assets/js/global.js" defer></script>
     <script src="./assets/js/index.js" type="module"></script>
 
@@ -23,17 +22,30 @@
 <header class="header">
     <a href="./index.html" class="logo">
         <img src="./assets/images/logo.svg" width="140" height="32" alt="Tvflix home">
-        <div class="search-box" searchbox>
-            <div class="search-wrapper" search-wrapper>
-                <input type="text" name="search" aria-label="search movies" placeholder="Search any movies..." class="search-field" search-field>
-                <img src="./assets/images/search.png"  width="24" height="24" alt="" class="leading-icon"> 
+     </a>
+        <div class="search-box active" searchbox>
+            <div class="search-wrapper searching" search-wrapper>
+                <input type="text" name="search" aria-label="search movies" placeholder="Search any movies..." class="search-field" autocomplete="off"  search-field>
+                <img src="./assets/images/search.png"  width="24" height="24" alt="search" class="leading-icon"> 
             </div>
-        </div>
 
-    </a>
+            <button class="search-btn" search-toggler>
+                <img src="./assets/images/close.png" width="24" height="24" alt="close search box">
+            </button>
+        </div>
+        
+
+        <button class="searchbtn" search-toggler menu-close>
+            <img src="./assets/images/search.png" width="24" height="24" alt="open search box">
+        </button>
+        <button class="menu-btn" menu-btn menu-toggel>
+            <img src="./assets/images/menu.png"  width= "24" height="24" alt="open menu" class="menu">
+            <img src="./assets/images/menu-close.png" width="24" height="24" alt="close menu " class="close">
+        </button>
 </header>
 
 <body>
     
 </body>
 </html>
+
