@@ -37,7 +37,7 @@ Language
 
 English
 Hindi
-Bengali
+Marathi
 
 Copyright 2023
 href = https://youtube.com/@codewithsadee

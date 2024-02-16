@@ -11,4 +11,4 @@ const searchtoggelers = document.querySelectorAll("[search-toggler]");
 addEventOnElements(searchtoggelers, "click", function (){
 
     searchbox.classList.toggle("active");
-})
+});
