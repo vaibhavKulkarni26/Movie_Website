@@ -130,7 +130,8 @@
   /*-----------------------------------*\
     #REUSED STYLE
   \*-----------------------------------*/
-  .search-wrapper::before{
+  .search-wrapper::before
+  .load-more::before{
     position: absolute;
     top: 14px;
     right: 12px;
@@ -143,8 +144,23 @@
     animation: loading 500ms linear infinite ;
     display: none;
   }
+  .search-wrapper::before{
+    position: absolute;
+    top: 14px;
+    right: 12px;
+  }
   
   .search-wrapper.searching::before{display: block;}
+
+  .load-more{
+    background-color: var(--primary-variant);
+    margin-inline: auto;
+    margin-block: 36px 60px;
+  }
+
+  .load-more:is(:hover, :focus-visible){ --primary-variant:hsla(350,67%,39%,1);}
+
+.load-more.loading::before{display: block;}
   
   @keyframes loading{
     0%{transform: rotate(0);}
@@ -224,12 +240,12 @@
 
   .slider-list::-webkit-scrollbar-thumb { background-color: transparent;}
   
-  .slider-list :is(:hover:focus-within)::-webkit-scrollbar-thumb{
+  .slider-list :is(:hover, :focus-within)::-webkit-scrollbar-thumb{
     background-color: var(--banner-background);
   }
   .slider-list::-webkit-scrollbar-button{ width: 20px;}
   
-  .slider-list .slidder-inner{
+  .slider-list .slider-inner{
     position: relative;
     display: flex;
     gap: 16px;
@@ -241,6 +257,21 @@
     min-width: 4px;
   }
 
+
+  .separator{
+    width: 4px;
+    height: 4px;
+    background-color: var(--white-alpha-20);
+    border-radius: var(--radius-8);
+  }
+ 
+  .video-card{
+   background-image: url('../images/video-bg-icon.png');
+   aspect-ratio: 16/9;
+   flex-shrink: 0;
+   max-width: 500px;
+   width: calc(100% - 40px);
+  }
 
   /*-----------------------------------*\
     #HEADER
@@ -646,13 +677,24 @@
   color: var(--text-color);
   min-width: 112px;
  }
+
+ 
  
   
   /*-----------------------------------*\
     #MOVIE LIST PAGE
   \*-----------------------------------*/
   
-  
+  .grid-list .title-wrapper{ margin-block-end: 56px;}
+
+  .grid-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
+    column-gap:16px;
+    row-gap: 20px;
+    }
+
+    .genre-list:is(.movie-card, .card-banner){ width: 100px;}
   
   
   /*-----------------------------------*\
